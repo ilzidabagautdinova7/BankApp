@@ -51,5 +51,23 @@ namespace BankApp.Services
                 return false;
             }
         }
+        public List<BankAccount> GetAccountsByOwner(string accountName)
+        {
+            return _accounts
+                .Where(acc => acc.AccountName.Equals(accountName, StringComparison.OrdinalIgnoreCase))
+                .ToList();
+        }
+
+        public List<SavingsAccount> GetSavingsAccounts()
+        {
+            return _accounts.OfType<SavingsAccount>().ToList();
+        }
+
+        public List<CreditAccount> GetCreditAccounts()
+        {
+            return _accounts.OfType<CreditAccount>().ToList();
+        }
     }
 }
+
+   
