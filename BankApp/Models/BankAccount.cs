@@ -44,4 +44,6 @@ namespace BankApp.Models
         public abstract void Withdraw(decimal amount);
         public abstract void DisplayInfo();
     }
+
 }
+
