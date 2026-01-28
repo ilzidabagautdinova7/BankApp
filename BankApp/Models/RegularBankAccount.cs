@@ -6,8 +6,8 @@ namespace BankApp.Models
 {
     public class RegularBankAccount:BankAccount
     {
-        public RegularBankAccount(string accountNumber, string owner, decimal initialBalance)
-        : base(accountNumber, owner, initialBalance) { }
+        public RegularBankAccount(string accountNumber, string accountName, decimal initialBalance)
+        : base(accountNumber, accountName, initialBalance) { }
 
         public override void Withdraw(decimal amount)
         {
