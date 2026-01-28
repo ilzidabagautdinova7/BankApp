@@ -19,7 +19,7 @@ namespace BankApp.Services
 
         public BankAccount FindAccount(string accountNumber)
         {
-            return _accounts.FirstOrDefault(acc => acc.AccountNumber == accountNumber);
+            return _accounts.FirstOrDefault(acc => acc.AccountNumber == accountNumber)!;
         }
 
         public List<BankAccount> GetAllAccounts()
